@@ -786,6 +786,16 @@
     /* ===========================
        レスポンシブ
     =========================== */
+    @media (max-width: 1024px) {
+      /* モバイルでは background-attachment:fixed が正しく描画されず、
+         背景写真が引き伸ばされて汚れ・線のように見えるため無効化する */
+      body {
+        background-image: none;
+        background-color: var(--sand-light);
+        background-attachment: scroll;
+      }
+    }
+
     @media (max-width: 768px) {
       nav {
         padding: 16px 20px;
